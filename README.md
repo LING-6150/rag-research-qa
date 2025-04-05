@@ -6,11 +6,20 @@ A scalable microservice-based RAG system that enables multi-document upload, sem
 
 ## 🧱 Project Architecture
 
-rag-research-qa/ ├── services/ │ ├── upload_service/ # Handles PDF parsing and embedding │ ├── question_service/ # Processes questions, performs retrieval + LLM │ └── shared/ # Common utils and shared modules ├── vector_store/ # FAISS or Qdrant integration ├── k8s/ # K8s manifests (YAMLs) ├── helm/ # Helm chart for full deployment ├── .github/ # CI/CD (GitHub Actions) ├── docs/ # Architecture & API specs ├── docker-compose.yml # Local dev (optional) └── README.md
-
-yaml
-Copy
-Edit
+```
+rag-research-qa/
+├── services/
+│   ├── upload_service/        # Handles PDF parsing and embedding
+│   ├── question_service/      # Processes questions, performs retrieval + LLM
+│   └── shared/                # Common utils and shared modules
+├── vector_store/              # FAISS or Qdrant integration
+├── k8s/                       # K8s manifests (YAMLs)
+├── helm/                      # Helm chart for full deployment
+├── .github/                   # CI/CD (GitHub Actions)
+├── docs/                      # Architecture & API specs
+├── docker-compose.yml         # Local dev (optional)
+└── README.md
+```
 
 ---
 
@@ -52,17 +61,25 @@ cd services/upload_service && uvicorn app.main:app --reload
 
 # 3. Run question service
 cd services/question_service && uvicorn app.main:app --reload
-📁 Docs
-docs/architecture.md: System architecture
+```
 
-docs/api_spec.md: API endpoints, parameters, and response format
+---
 
-k8s/: Kubernetes manifests (deployment, service, ingress)
+## 📁 Docs
 
-helm/: Helm chart for scalable deployment
+- `docs/architecture.md`: System architecture
+- `docs/api_spec.md`: API endpoints, parameters, and response format
+- `k8s/`: Kubernetes manifests (deployment, service, ingress)
+- `helm/`: Helm chart for scalable deployment
 
-🧑‍💻 Author
-Built by Ling Duan — For backend/RAG engineering, AI Infra, and DevOps showcase.
+---
 
-📬 Contact
+## 🧑‍💻 Author
+
+Built by **Ling Duan** — For backend/RAG engineering, AI Infra, and DevOps showcase.
+
+---
+
+## 📬 Contact
+
 If you're a researcher, engineer, or team interested in AI-assisted document Q&A — feel free to connect!
